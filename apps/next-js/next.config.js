@@ -12,6 +12,19 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '4400',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.placeholder.com',
+      },
+    ],
+  },
 };
 
 module.exports = withNx(nextConfig);
